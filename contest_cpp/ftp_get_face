@@ -1,0 +1,48 @@
+#!/bin/sh
+HOST='10.30.11.68'
+USER='ugv'
+PASSWD='ugv'
+
+ftp -n $HOST <<END_SCRIPT
+quote USER $USER
+quote PASS $PASSWD
+binary
+passive mode
+lcd dataset
+cd face_database
+
+get 1_a.jpg
+get 1_b.jpg
+get 1_c.jpg
+get 1_d.jpg
+
+get 2_a.jpg
+get 2_b.jpg
+get 2_c.jpg
+get 2_d.jpg
+
+get 3_a.jpg
+get 3_b.jpg
+get 3_c.jpg
+get 3_d.jpg
+
+get 4_a.jpg
+get 4_b.jpg
+get 4_c.jpg
+get 4_d.jpg
+
+get 5_a.jpg
+get 5_b.jpg
+get 5_c.jpg
+get 5_d.jpg
+
+lcd ..
+lcd target
+cd ..
+cd image_face
+
+get target.jpg
+
+quit
+END_SCRIPT
+exit 0

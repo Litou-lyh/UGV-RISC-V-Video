@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( contest_cpp )
+add_compile_options(-std=c++11)
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( contest_cpp_1 main.cpp )
+target_link_libraries( contest_cpp_1 -lpthread ${OpenCV_LIBS} )

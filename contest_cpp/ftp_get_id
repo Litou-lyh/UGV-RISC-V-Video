@@ -1,0 +1,34 @@
+#!/bin/sh
+HOST='10.30.11.68'
+USER='ugv'
+PASSWD='ugv'
+
+ftp -n $HOST <<END_SCRIPT
+quote USER $USER
+quote PASS $PASSWD
+binary
+lcd 'images_idcard'
+cd 'id_database'
+get '1.jpg'
+get '2.jpg'
+get '3.jpg'
+get '4.jpg'
+get '5.jpg'
+get '6.jpg'
+get '7.jpg'
+get '8.jpg'
+get '9.jpg'
+get '10.jpg'
+get '11.jpg'
+get '12.jpg'
+get '13.jpg'
+get '14.jpg'
+get '15.jpg'
+get '16.jpg'
+get '17.jpg'
+get '18.jpg'
+get '19.jpg'
+get '20.jpg'
+quit
+END_SCRIPT
+exit 0

@@ -1,0 +1,3 @@
+/home/user/ugv/contest_cpp/CMakeFiles/rebuild_cache.dir
+/home/user/ugv/contest_cpp/CMakeFiles/contest_cpp_1.dir
+/home/user/ugv/contest_cpp/CMakeFiles/edit_cache.dir
